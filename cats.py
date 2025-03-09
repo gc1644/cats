@@ -1,6 +1,5 @@
 with open('list.txt', 'r') as f:
 	content = f.read()
-with open('list.txt', 'r') as f:
 	text = len(f.readlines())
 print('The book already contain ', text, ' names: ' + '\n' + content)
 Cats = []
