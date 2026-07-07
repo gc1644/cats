@@ -2,6 +2,11 @@
 
 ## Scripts
 
+
+### `cats.py`
+
+Asks you for names and saves them to `list.txt`
+
 ### `random_cat.py`
 
 Randomly selects a cat name from `list.txt` to help you name your next feline friend.
