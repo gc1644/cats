@@ -5,7 +5,7 @@
 
 ### `cats.py`
 
-Asks you for names and saves them to `list.txt`
+Asks you for cat names and saves them to `list.txt`
 
 ### `random_cat.py`
 
