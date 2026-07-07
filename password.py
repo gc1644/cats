@@ -3,6 +3,7 @@
 import random
 import string
 
+
 def generate_password():
     length = int(input("How many characters? ").strip())
     include_uppercase = input("Include uppercase letters? (Y/n): ").strip().lower()
