@@ -13,7 +13,7 @@ Randomly selects a cat name from `list.txt` to help you name your next feline fr
 
 ### `password.py`
 
-Generates a secure password with customizable options, including the ability to include a random cat name from `list.txt.`
+Generates a secure password with customizable options, you can even include a random cat name from `list.txt.`
 
 ### `new-feature.sh`
 
