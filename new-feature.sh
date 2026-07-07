@@ -49,8 +49,6 @@ git commit -m "$MESSAGE"
 
 git push -u origin "$BRANCH"
 
-git checkout main
-
 echo
 echo "done!"
 echo
