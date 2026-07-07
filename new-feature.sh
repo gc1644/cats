@@ -22,7 +22,17 @@ if [ "$CURRENT_BRANCH" != "main" ]; then
     exit 1
 fi
 
-git checkout main
+CURRENT_BRANCH=$(git branch --show-current)
+
+if [ "$CURRENT_BRANCH" != "main" ]; then
+    if ! git diff --quiet || ! git diff --cached --quiet; then
+        echo "You have uncommitted changes on branch '$CURRENT_BRANCH'."
+        echo "Please commit them or stash them before switching to main."
+        exit 1
+    fi
+
+    git checkout main
+fi
 
 git pull --ff-only
 
