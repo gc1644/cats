@@ -15,6 +15,13 @@ BRANCH=$(echo "$MESSAGE" \
 
 echo "Creating branch: $BRANCH"
 
+CURRENT_BRANCH=$(git branch --show-current)
+
+if [ "$CURRENT_BRANCH" != "main" ]; then
+    echo "Please switch to 'main' before running this script."
+    exit 1
+fi
+
 git checkout main
 
 git pull --ff-only
