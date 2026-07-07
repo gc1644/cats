@@ -17,11 +17,11 @@ Generates a secure password with customizable options, including the ability to 
 
 ### `new-feature.sh`
 
-Automates the Git feature branch workflow and farming them 🦈:
+Automates the Git feature branch workflow:
 
 Creating a new branch from your commit message.
 Staging all changes.
 Creating a commit.
 Pushing the branch to GitHub.
-Preparing the repository for a Pull Request.
+Preparing the repository for a Pull Request 🦈
 
