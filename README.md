@@ -1,4 +1,11 @@
-# store your ideas for cat names here
+# 🐈 Cats
 
-- random_cat.py will choose random name for your cat
-- password.py will generate secure password with cat names
+## Scripts
+
+### `random_cat.py`
+
+Randomly selects a cat name from `list.txt` to help you name your next feline friend.
+
+### `password.py`
+
+Generates a secure password with customizable options, including the ability to include a random cat name from `list.txt`.
