@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 with open('list.txt', 'r') as f:
 	content = f.read()
 	text = len(f.readlines())
