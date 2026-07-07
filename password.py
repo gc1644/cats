@@ -5,9 +5,11 @@ import string
 
 def generate_password():
     length = int(input("How many characters? ").strip())
-    include_uppercase = input("Include upperase letters? (Y/n): ").strip().lower()
+    include_uppercase = input("Include uppercase letters? (Y/n): ").strip().lower()
     include_special = input("Include special characters? (Y/n): ").strip().lower()
     include_digits = input("Include digits? (Y/n): ").strip().lower()
+    print(f"\033[31mWarning: Including a cat name will make the password longer than {length}.\033[0m")
+    include_cats = input("Include a random cat name? (Y/n): ").strip().lower()
 
     if length < 4:
         print("Too short!")
@@ -26,6 +28,12 @@ def generate_password():
         required_characters.append(random.choice(special))
     if include_digits == "y":
         required_characters.append(random.choice(digits))
+    if include_cats == "y":
+        with open("list.txt", "r") as file:
+            words = file.read().splitlines()
+            
+        random_cat = random.choice(words)
+        required_characters.append(random_cat)
 
     remaining_length = length - len(required_characters)
     password = required_characters
