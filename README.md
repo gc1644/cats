@@ -25,3 +25,17 @@ Creating a commit.
 Pushing the branch to GitHub.
 Preparing the repository for a Pull Request 🦈
 
+### Makefile
+
+Run common project tasks with:
+
+```bash
+make help
+```
+
+Available commands:
+
+- `make help` – Show available commands.
+- `make password` – Generate a secure password.
+- `make random-cat` – Pick a random cat name.
+- `make clean` – Placeholder for future cleanup tasks.
