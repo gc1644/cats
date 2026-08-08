@@ -44,8 +44,6 @@ Available commands:
 
 A collection of completely serious cat-related utilities.
 
-## catctl
-
 `catctl` is a lightweight command-line tool for managing the cat infrastructure.
 
 ```bash
@@ -72,17 +70,8 @@ Restart a cat that is experiencing operational issues.
 
 View recent cat activity.
 
-### Example
-
 ```text
 $ ./catctl status
-
-🐈 CAT INFRASTRUCTURE STATUS
-============================
-
-randy           ONLINE
-garfield        HUNGRY
-tom             SLEEPING
 ```
 
 Built with Bash because cats don't need Kubernetes.
