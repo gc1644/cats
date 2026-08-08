@@ -1,0 +1,77 @@
+#!/bin/bash
+
+CATS_FILE="list.txt"
+
+status() {
+    echo "🐈 CAT INFRASTRUCTURE STATUS"
+    echo "============================"
+    echo
+
+    while read -r cat; do
+        case "$((RANDOM % 3))" in
+            0) state="ONLINE" ;;
+            1) state="SLEEPING" ;;
+            2) state="HUNGRY" ;;
+        esac
+
+        printf "%-15s %s\n" "$cat" "$state"
+    done < "$CATS_FILE"
+}
+
+deploy() {
+    cat="$1"
+
+    echo "Deploying $cat..."
+    sleep 1
+    echo "[████████████████████] 100%"
+    echo
+    echo "Deployment successful."
+    echo "$cat is now HAPPY."
+}
+
+restart() {
+    cat="$1"
+
+    echo "Restarting $cat..."
+    sleep 1
+    echo "$cat restarted successfully."
+}
+
+logs() {
+    cat="$1"
+
+    echo "Fetching logs for $cat..."
+    echo
+    echo "[INFO] $cat woke up"
+    echo "[INFO] $cat demanded food"
+    echo "[INFO] $cat knocked something off the table"
+    echo "[INFO] $cat went back to sleep"
+}
+
+case "$1" in
+    status)
+        status
+        ;;
+
+    deploy)
+        deploy "$2"
+        ;;
+
+    restart)
+        restart "$2"
+        ;;
+
+    logs)
+        logs "$2"
+        ;;
+
+    *)
+        echo "catctl - Cat Infrastructure Management"
+        echo
+        echo "Usage:"
+        echo "  ./catctl status"
+        echo "  ./catctl deploy <cat>"
+        echo "  ./catctl restart <cat>"
+        echo "  ./catctl logs <cat>"
+        ;;
+esac

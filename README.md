@@ -39,3 +39,50 @@ Available commands:
 - `make password` – Generate a secure password.
 - `make random-cat` – Pick a random cat name.
 - `make clean` – Placeholder for future cleanup tasks.
+
+### catctl
+
+A collection of completely serious cat-related utilities.
+
+## catctl
+
+`catctl` is a lightweight command-line tool for managing the cat infrastructure.
+
+```bash
+./catctl status
+```
+
+Check the current state of the cat fleet.
+
+```bash
+./catctl deploy <cat>
+```
+
+Deploy a cat.
+
+```bash
+./catctl restart <cat>
+```
+
+Restart a cat that is experiencing operational issues.
+
+```bash
+./catctl logs <cat>
+```
+
+View recent cat activity.
+
+### Example
+
+```text
+$ ./catctl status
+
+🐈 CAT INFRASTRUCTURE STATUS
+============================
+
+randy           ONLINE
+garfield        HUNGRY
+tom             SLEEPING
+```
+
+Built with Bash because cats don't need Kubernetes.
