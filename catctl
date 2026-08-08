@@ -21,6 +21,11 @@ status() {
 deploy() {
     cat="$1"
 
+    if ! grep -Fxq "$cat" "$CATS_FILE"; then
+        echo "ERROR: cat '$cat' not found in inventory."
+        return 1
+    fi
+
     echo "Deploying $cat..."
     sleep 1
     echo "[████████████████████] 100%"
